@@ -4,9 +4,10 @@ configurations {
 
 buildscript {
     repositories {
-        maven { url "http://repo.spring.io/libs-release" }
-        mavenLocal()
-        mavenCentral()
+//        maven { url "http://repo.spring.io/libs-release" }
+//        mavenLocal()
+//        mavenCentral()
+        maven { url "http://localhost:8081/artifactory/remote-repos" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.4.RELEASE")
@@ -19,9 +20,10 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 repositories {
-    mavenLocal()
-    mavenCentral()
-    maven { url 'http://repo.spring.io/libs-release' }
+//    mavenLocal()
+//    mavenCentral()
+//    maven { url 'http://repo.spring.io/libs-release' }
+    maven { url "http://localhost:8081/artifactory/remote-repos" }
 }
 
 // tag::wsdl[]
